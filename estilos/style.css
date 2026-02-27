@@ -122,7 +122,7 @@ article {
 
 article h2 {
   color: var(--destaque);
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 
 }
 
@@ -142,29 +142,29 @@ div.video-container iframe {
   border-radius: 5px;
 }
 
-div#skillcontainer {
+div#skill-container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
 }
 
-#skillcontainer .info {
+#skill-container .info {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-#skillcontainer .nome {
+#skill-container .nome {
   font-weight: bold;
   color: var(--texto);
 }
 
-#skillcontainer .porcent {
+#skill-container .porcent {
   font-weight: bold;
   color: var(--destaque);
 }
 
-#skillcontainer .barra {
+#skill-container .barra {
   width: 100%;
   height: 8px;
   background-color: var(--fundo-principal);
@@ -172,14 +172,42 @@ div#skillcontainer {
   margin-top: 7px;
 }
 
-#skillcontainer .progresso {
+#skill-container .progresso {
   background-color: var(--destaque);
   height: 100%;
   border-radius: 4px;
 }
 
+.formacao-container {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+}
+
+.formacao-container .curso {
+  text-indent: 10px;
+  padding-left: 15px;
+  border-radius: 10px;
+  background-color: var(--fundo-principal);
+  border-left: 5px solid var(--destaque);
+  transition: border-width 0.3s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.curso:hover {
+  border-left-width: 15px;
+  cursor: pointer;
+  border-color: var(--destaque-inverso);
+}
+
+.formacao-container .instituicao {
+  color: var(--destaque);
+  font-size: 1.1em;
+}
+
 @media screen and (min-width: 768px) {
-  div#skillcontainer {
+  div#skill-container {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+
