@@ -142,3 +142,44 @@ div.video-container iframe {
   border-radius: 5px;
 }
 
+div#skillcontainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+#skillcontainer .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#skillcontainer .nome {
+  font-weight: bold;
+  color: var(--texto);
+}
+
+#skillcontainer .porcent {
+  font-weight: bold;
+  color: var(--destaque);
+}
+
+#skillcontainer .barra {
+  width: 100%;
+  height: 8px;
+  background-color: var(--fundo-principal);
+  border-radius: 4px;
+  margin-top: 7px;
+}
+
+#skillcontainer .progresso {
+  background-color: var(--destaque);
+  height: 100%;
+  border-radius: 4px;
+}
+
+@media screen and (min-width: 768px) {
+  div#skillcontainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
