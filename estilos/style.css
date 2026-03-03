@@ -196,7 +196,7 @@ div#skill-container {
 .curso:hover {
   border-left-width: 15px;
   cursor: pointer;
-  border-color: var(--destaque-inverso);
+  border-color: #57b9f1;
 }
 
 .formacao-container .instituicao {
@@ -204,10 +204,78 @@ div#skill-container {
   font-size: 1.1em;
 }
 
+#projeto-container {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+}
+
+#projeto-container .projeto {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: var(--fundo-principal);
+  padding: 10px;
+  border-radius: 8px;
+  border-left: 5px solid var(--destaque);
+  
+  transition: border-color 0.3s, border-width 0.3s;
+}
+
+#projeto-container .projeto:hover {
+  border-color: #57b9f1;
+  border-left-width: 15px;
+  cursor: pointer;
+}
+
+#projeto-container a .foto {
+  width: 100%;
+  aspect-ratio: 16/9 ;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: var(--destaque);
+  text-align: center;
+  color: var(--texto-inverso);
+  padding: 10px;
+}
+
+footer a {
+  color: var(--texto-inverso);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: var(--destaque-inverso);
+}
+
+
 @media screen and (min-width: 768px) {
   div#skill-container {
     grid-template-columns: 1fr 1fr;
   }
+
+  #projeto-container .projeto {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  #projeto-container .projeto-info {
+    max-width: 80%;
+  }
+
+  #projeto-container .foto {
+    aspect-ratio: 1/1 ;
+    object-fit: cover;
+    max-width: 20%;
+    max-height: 200px;
+    border-radius: 8px;
+  }
 }
+
 
 
