@@ -235,7 +235,7 @@ div#skill-container {
 }
 
 #projeto-container .projeto:hover {
-  border-color: #57b9f1;
+  border-color: var(--destaque-inverso);
   border-left-width: 15px;
   cursor: pointer;
 }
